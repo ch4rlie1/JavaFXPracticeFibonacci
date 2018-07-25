@@ -1,0 +1,69 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.Tooltip?>
+<GridPane fx:controller="fib.Controller"
+          stylesheets="/fib/fib.css"
+          prefHeight="134.0" prefWidth="270.0"
+          gridLinesVisible="true"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="0" vgap="10">
+    <Button text="Calculate!"
+            onAction="#calcFib"
+            defaultButton="true"
+            textAlignment="CENTER"
+            GridPane.rowIndex="2"
+            GridPane.columnIndex="1"
+    />
+    <TextField GridPane.rowIndex="2"
+               GridPane.columnIndex="0"
+               fx:id = "txtBox"
+    />
+    <Label GridPane.rowIndex="5"
+           fx:id="label"
+    />
+    <Label GridPane.rowIndex="2"
+           GridPane.columnIndex="3"
+           text="Help"
+            >
+        <tooltip><Tooltip text="Please bear in mind that 0 is included when calculating a number therefore it may look like there is one less number than there should be" /></tooltip>
+    </Label>
+    <Label GridPane.rowIndex="0"
+           wrapText="true"
+           text="Input a number between 1 and 32 and click the button to calculate that many fibonacci numbers!"
+           GridPane.columnSpan="2"
+           GridPane.rowSpan="2"
+           />
+    <FlowPane fx:id="flowpane"
+              visible="true"
+              orientation="VERTICAL"
+              prefWrapLength="90"
+              GridPane.rowIndex="4"
+              GridPane.rowSpan="17"
+              GridPane.columnSpan="2"
+              maxHeight="220"
+              maxWidth="260"
+              vgap="4" hgap="15">
+                <Label fx:id="num" >
+                </Label>
+    </FlowPane>
+    <!--<ScrollPane fx:id="scrollpane"
+                GridPane.rowIndex="3"
+                GridPane.rowSpan="17"
+                GridPane.columnSpan="2">
+        <Label fx:id="num">
+        </Label>
+        <Label fx:id="value">
+        </Label>
+    </ScrollPane>-->
+    <!--<ScrollBar GridPane.columnIndex="3"
+               GridPane.rowIndex="3"
+               GridPane.rowSpan="3"
+               orientation="VERTICAL"
+               unitIncrement="2"
+               onScroll="#scroll"
+        /> -->
+</GridPane>
